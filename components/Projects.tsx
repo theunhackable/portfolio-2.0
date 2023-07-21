@@ -59,7 +59,7 @@ const Projects = () => {
       <p className='text-center text-body-large font-extrabold text-dark-5 dark:text-light-b ml-96 mb-16'> — Linus Torvalds.</p>
 
       <div className="flex flex-wrap justify-center p-16 gap-16">
-        {projects.map(project => <ProjectCard heading={project.heading} image={project.image} tags={project.tags}/>)}
+        {projects.map(project => <ProjectCard key={project.heading} heading={project.heading} image={project.image} tags={project.tags}/>)}
       </div>
     </section>
   )

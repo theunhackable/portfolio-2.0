@@ -1,8 +1,10 @@
+import { useTheme } from 'next-themes';
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 const Contact = () => {
+  const {theme, setTheme} = useTheme();
   return (
     <section className='p-16 flex flex-col justify-center items-center'>
       <h1 className="heading text-center mb-16"> <span className='text-black dark:text-white'>Contact </span>Info.</h1>
@@ -16,7 +18,7 @@ const Contact = () => {
           <Image src='/assets/icons/linkedin.svg' alt='twitter' width={75} height={50}/>
         </Link>
         <Link href='/'>
-          <Image src='/assets/icons/github.svg' alt='twitter' width={75} height={50}/>
+          <Image src={`/assets/icons/github${theme === "dark"? "_dark": ""}.svg`} alt='twitter' width={75} height={50}/>
         </Link>
 
       </ul>

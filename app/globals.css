@@ -16,6 +16,6 @@ section{
 }
 
 .heading {
-    @apply text-h-2 font-extrabold text-dark-5 dark:text-light-b leading-tight  tracking-tight ;
+    @apply text-h-2 font-extrabold text-dark-5 dark:text-light-b leading-tight  tracking-tight max-xl:text-h-3;
     
 }
