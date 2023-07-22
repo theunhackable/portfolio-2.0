@@ -7,35 +7,36 @@ import React from 'react'
 const Hero = () => {
   const {theme, setTheme} = useTheme();
   return (
-    <section className='flex flex-col justify-center'>
-        <div className="flex m-4 justify-evenly items-center gap-16">
+    <section>
+        <div className="flex justify-evenly items-center gap-16 max-lg:gap-8 max-md:flex-col-reverse max-md:text-center">
           <div>
             <h1 className='heading'>
             Hi! I am <span className='text-black dark:text-white'>Sri Ranga Sai</span>,<br/> a <span className='text-black dark:text-white'>Full Stack Web<br/> Developer</span>
             </h1>
             <div className='mt-16'>
 
-              <ul className="flex gap-16 items-center">
+              <ul className="flex flex-wrap gap-16 max-lg:gap-8 justify-center items-center">
                 <Link href='/'>
-                  <Image src='/assets/icons/twitter.svg' alt='twitter' width={50} height={50}/>
+                  <Image src='/assets/icons/twitter.svg' alt='twitter' width={50} height={50} className='max-xl:w-[45px]'/>
                 </Link>
                 <Link href='/'>
-                  <Image src='/assets/icons/linkedin.svg' alt='twitter' width={50} height={50}/>
+                  <Image src='/assets/icons/linkedin.svg' alt='twitter' width={50} height={50} className='max-xl:w-[45px] '/>
                 </Link>
                 <Link href='/'>
-                  <Image src={`/assets/icons/github${theme === "dark"? "_dark": ""}.svg`} alt='twitter' width={50} height={50}/>
+                  <Image src={`/assets/icons/github${theme === "dark"? "_dark": ""}.svg`} alt='twitter' width={50} height={50} className='max-xl:w-[45px]'/>
                 </Link>
                 <Link href='/'>
-                  <div className='flex gap-2 bg-dark-2 dark:bg-light-e text-white dark:text-dark-2 px-8 py-2 rounded-2xl justify-center items-center hover:bg-dark-blue dark:hover:bg-light-blue'>
-                    <h6 className='text-body-large font-semibold'>Resume</h6>
+                  <div className='flex gap-2 bg-dark-2 dark:bg-light-e text-white dark:text-dark-2 px-8 max-xl:px-4 py-2 rounded-2xl justify-center items-center hover:bg-dark-blue dark:hover:bg-light-blue'>
+                    <h6 className='text-body-large font-semibold max-xl:text-body-medium'>Resume</h6>
                     <Image className='float' src={`/assets/icons/open_in_new${theme === "dark"? "_dark": ""}.svg`} alt='open' width={25} height={25}/>
                   </div>
                 </Link>
               </ul>
             </div>
           </div>
-          <div>
-            <Image src={`/assets/images/hero_image${theme === "dark"? "_dark": ""}.png`} alt='hero image'width={400} height={400}/>
+          <div className=''>
+            <Image src={`/assets/images/hero_image${theme === "dark"? "_dark": ""}.png`} alt='hero image' width={400} height={400} className='max-xl:w-[375px] max-lg:w-[325px] max-sm:w-[275px]'
+            priority/>
           </div>
         </div>
     </section>

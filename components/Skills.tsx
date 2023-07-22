@@ -69,8 +69,8 @@ const skills = [
 
 const SkillCard=({skill, img}:{skill:string, img: string}) =>(
   <div id="skill-container" className='flex flex-col justify-center
-  items-center dark:text-white text-body-medium font-semibold'>
-  <Image src={`/assets/icons/${img}`} alt={skill} height={100} width={100}/>
+  items-center dark:text-white text-body-medium max-md:text-body-normal font-semibold'>
+  <Image src={`/assets/icons/${img}`} alt={skill} height={100} width={100} className='max-md:w-[75px]'/>
   <p className='mt-2'>
     {skill}
   </p>
@@ -79,11 +79,11 @@ const SkillCard=({skill, img}:{skill:string, img: string}) =>(
 const Skills = () => {
   const {theme, setTheme} = useTheme();
   return (
-    <section className='flex flex-col justify-center items-center p-16'>
+    <section>
       <h1 className="heading text-center mb-16">
         <span className='text-black dark:text-white'> Skills.</span>
       </h1>
-      <div id="skills-wrapper" className='flex flex-wrap justify-center gap-16'>  
+      <div id="skills-wrapper" className='flex flex-wrap justify-center max-md:justify-evenly gap-16 max-md:gap-12 max-sm:gap-8'>  
         {skills.map(item => <SkillCard key={item.skill} skill={item.skill} img={theme ==="dark"? item.dark_img: item.img}/>) }
       </div>
     </section>
