@@ -13,7 +13,7 @@ const Navbar = () => {
   }
   return (
     <>
-      <nav className='fixed flex items-center justify-between px-16 pt-1 w-full top-0  backdrop-blur-lg max-lg:px-8 max-sm:px-2'>
+      <nav className='z-10 fixed flex items-center justify-between px-16 pt-1 w-full top-0  backdrop-blur-lg max-lg:px-8 max-sm:px-2'>
         <div>
           <Image width={50} height={50} src='/assets/images/logo.png' alt="logo"/>
         </div>
@@ -21,14 +21,14 @@ const Navbar = () => {
           
           <div className='p-0 max-md:hidden'>
             <ul className='flex gap-4 font-bold text-dark-2 dark:text-light-d text-body-large items-center'>
-              <Link href='/'>Home</Link>
-              <Link href='/about'>About Me</Link>
-              <Link href='/projects'>Project</Link>
-              <Link href='/contact'>Contact</Link>
+              <Link href='#home'>Home</Link>
+              <Link href='#about'>About Me</Link>
+              <Link href='#projects'>Project</Link>
+              <Link href='#contact'>Contact</Link>
             </ul>
           </div>
           <ThemeButton />
-          <div onClick={() => {setIsOpened(!isOpened)}}>
+          <div className='none max-md:block' onClick={() => {setIsOpened(!isOpened)}}>
             {isOpened? <CloseButton /> :<MenuButton/>}
           </div>
         </div>

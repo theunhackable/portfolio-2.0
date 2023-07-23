@@ -1,3 +1,4 @@
+"use client";
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import React from 'react'
@@ -79,7 +80,7 @@ const SkillCard=({skill, img}:{skill:string, img: string}) =>(
 const Skills = () => {
   const {theme, setTheme} = useTheme();
   return (
-    <section>
+    <section id="about">
       <h1 className="heading text-center mb-16">
         <span className='text-black dark:text-white'> Skills.</span>
       </h1>
