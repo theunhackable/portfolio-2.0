@@ -12,13 +12,13 @@ const Contact = () => {
 
       <ul className="flex my-16 max-sm:my-8 gap-16 items-center justify-center max-sm:gap-8">
         
-        <Link href='/'>
+        <Link target="__blank" href='https://twitter.com/SriRangaSaiP'>
           <Image src='/assets/icons/twitter.svg' alt='twitter' width={75} height={50} className='max-sm:w-[50px]'/>
         </Link>
-        <Link href='/'>
+        <Link target="__blank" href='https://www.linkedin.com/in/srsp1116'>
           <Image src='/assets/icons/linkedin.svg' alt='twitter' width={75} height={50}className='max-sm:w-[50px]'/>
         </Link>
-        <Link href='/'>
+        <Link target="__blank" href='https://github.com/theunhackable'>
           <Image src={`/assets/icons/github${theme === "dark"? "_dark": ""}.svg`} alt='twitter' width={75} height={50} className='max-sm:w-[50px]'/>
         </Link>
 
