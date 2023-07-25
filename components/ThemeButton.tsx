@@ -1,12 +1,14 @@
-"use client"
 import { useTheme } from 'next-themes'
 import Image from 'next/image';
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const ThemeButton = () => {
   
   const {theme, setTheme} = useTheme();
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
+
     const addTheme = () => {
       const userTheme = localStorage.getItem("theme");
       if(userTheme){
@@ -17,7 +19,9 @@ const ThemeButton = () => {
         setTheme("light");
       }
     }
+    setMounted(true);
     addTheme();
+    return () => { setMounted(false)};
     
   }, []);
 
@@ -39,6 +43,10 @@ const ThemeButton = () => {
       }
 
   };
+
+  if(!mounted) {
+    return null
+  }
   
   return (
         <div className='rounded-full p-1 bg-dark-2 dark:bg-light-a' onClick={handleThemeChange}>

@@ -28,7 +28,7 @@ const ProjectCard = ({heading, image, tags}: {heading: string, image: string, ta
   return (
     <div className="project-container">
           <div className="project-image border-white border-[1px] rounded-2xl">
-            <Image className='rounded-2xl' src={`/assets/projects/${image}`} alt={heading} width={600} height={300}/>
+            <Image className='rounded-2xl' src={`/assets/projects/${image}`} alt={heading} width={600} height={300} priority />
           </div>
           <div className="project-content pt-4">
             <h1 className="text-h-5 max-lg:text-h-6 max-md:text-body-large font-semibold">

@@ -1,7 +1,7 @@
 "use client";
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const skills = [
   {
@@ -79,6 +79,11 @@ const SkillCard=({skill, img}:{skill:string, img: string}) =>(
 )
 const Skills = () => {
   const {theme, setTheme} = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  })
+  if(!mounted) return null;
   return (
     <section id="about">
       <h1 className="heading text-center mb-16">

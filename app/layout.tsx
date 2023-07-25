@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='bg-light-e dark:bg-dark-2 font-inter scroll-smooth'>
+      <body>
           <Provider>
             {children}
           </Provider>

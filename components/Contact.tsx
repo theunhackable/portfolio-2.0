@@ -2,10 +2,15 @@
 import { useTheme } from 'next-themes';
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Contact = () => {
   const {theme, setTheme} = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  })
+  if(!mounted) return null;
   return (
     <section id='contact'>
       <h1 className="heading text-center mb-16 max-sm:mb-4"> <span className='text-black dark:text-white'>Contact </span>Info.</h1>

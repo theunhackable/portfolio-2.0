@@ -13,3 +13,19 @@ whenever we are giving space betweeen any elements it should be a multiple of 4.
 
 - always have less spacing to the elements inside the container eg: padding of 16 should have elements with space less than 16 i.e. 8, 4.
 - learn to break that rule when you have to seperate elements from same container go up like 16, 20 etc for creating seperation. mostly used for vertical spacing
+
+
+# Resolve hydration Issue
+if u get warning that clint props not matched with the server props do this
+
+```js
+const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  })
+  if(!mounted) return null;
+  return (
+    <Element />)
+
+
+```

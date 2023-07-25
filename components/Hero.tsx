@@ -2,11 +2,16 @@
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 
 const Hero = () => {
   const {theme, setTheme} = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  })
+  if(!mounted) return null;
   return (
     <section id='hero'>
         <div className="flex justify-evenly items-center gap-16 max-lg:gap-8 max-md:flex-col-reverse max-md:text-center">
