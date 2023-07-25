@@ -27,11 +27,15 @@ const Navbar = () => {
               <Link href='#contact'>Contact</Link>
             </ul>
           </div>
-          <ThemeButton />
+        </div>
+
+        <div>
+        <ThemeButton />
           <div className='none max-md:block' onClick={() => {setIsOpened(!isOpened)}}>
             {isOpened? <CloseButton /> :<MenuButton/>}
           </div>
         </div>
+
 
       </nav>
       {isOpened ? <ul className='mt-[72px] p-4 w-1/2 md:hidden flex flex-col fixed right-0 gap-8 font-extrabold text-dark-2 backdrop-blur-xl dark:text-light-e text-body-large items-center'>
