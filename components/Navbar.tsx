@@ -23,19 +23,16 @@ const Navbar = () => {
             <ul className='flex gap-4 font-bold text-dark-2 dark:text-light-d text-body-large items-center'>
               <Link href='#home'>Home</Link>
               <Link href='#about'>About Me</Link>
+              <Link href='#skills'>Skills</Link>
               <Link href='#projects'>Project</Link>
               <Link href='#contact'>Contact</Link>
             </ul>
           </div>
-        </div>
-
-        <div>
-        <ThemeButton />
+          <ThemeButton />
           <div className='none max-md:block' onClick={() => {setIsOpened(!isOpened)}}>
             {isOpened? <CloseButton /> :<MenuButton/>}
           </div>
         </div>
-
 
       </nav>
       {isOpened ? <ul className='mt-[72px] p-4 w-1/2 md:hidden flex flex-col fixed right-0 gap-8 font-extrabold text-dark-2 backdrop-blur-xl dark:text-light-e text-body-large items-center'>

@@ -9,10 +9,13 @@ html{
 
 }
 section{
-    @apply flex flex-col justify-center p-16 max-lg:px-8 max-lg:py-16 max-sm:px-2;
+    @apply flex flex-col items-center justify-center p-16 max-lg:px-8 max-lg:py-16 max-sm:px-2;
     min-height: 100vh;
-}
 
+}
+body {
+    @apply bg-light-e dark:bg-dark-2
+}
 .project-container{
     @apply border-light-a border-2 p-4 max-sm:p-2 w-fit rounded-2xl dark:text-white shadow-light dark:shadow-dark;
     
@@ -26,4 +29,23 @@ section{
 
 .none {
     display: none;
+}
+
+.nav-center{
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 2000px;
+    z-index: 999;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-once:hover{
+    animation: spin 1s 1;
 }

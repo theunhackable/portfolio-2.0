@@ -85,7 +85,7 @@ const Skills = () => {
   })
   if(!mounted) return null;
   return (
-    <section id="about">
+    <section id="skills">
       <h1 className="heading text-center mb-16">
         <span className='text-black dark:text-white'> Skills.</span>
       </h1>
