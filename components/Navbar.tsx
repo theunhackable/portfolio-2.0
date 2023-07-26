@@ -26,6 +26,7 @@ const Navbar = () => {
               <Link href='#skills'>Skills</Link>
               <Link href='#projects'>Project</Link>
               <Link href='#contact'>Contact</Link>
+
             </ul>
           </div>
           <ThemeButton />

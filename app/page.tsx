@@ -6,11 +6,13 @@ import Hero from '@/components/Hero'
 import Navbar from '@/components/Navbar'
 import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
+import TransitionEffect from '@/components/TransitionEffect'
 import { ThemeProvider } from 'next-themes'
 
 export default function Home() {
   return (
     <>
+    <TransitionEffect/>
       <header>
         <Navbar />
       </header>

@@ -7,24 +7,30 @@ const projects = [
     heading: 'promptopia',
     image: 'promptopia.png',
     desc: `Promptopia is a full stack nextjs project that is useful to create edit and use AI prompts. Sign In with your google account and get started ...`,
-    tags:['Next Js', 'Vercel']
+    tags:['Next Js', 'Vercel'],
+    live: 'https://promptopia-two-dun.vercel.app/',
+    github: 'https://github.com/theunhackable/promptopia'
   },
   {
     heading: 'GPT-3 Landing Page',
     image: 'gpt3.png',
     desc: `Landing page of GPT-3, build using React.Js. This web page is responsive and mobile friendly. Used CSS3 for styling. Deployed to GitHub Pages using gh-pages tool.`,
-    tags:['React Js', 'Github Pages']
+    tags:['React Js', 'Github Pages'],
+    live: 'https://theunhackable.github.io/gpt3-landing-page/',
+    github: 'https://github.com/theunhackable/gpt3-landing-page'
   },
   {
     heading: 'Cryptor',
     image: 'cryptor.png',
     desc: `This website is used to encrypt and decrypt text files.`,
-    tags:['HTML', 'CSS', 'Flask(Python3)']
+    tags:['HTML', 'CSS', 'Flask(Python3)'],
+    live: 'https://cryptor.pythonanywhere.com/',
+    github: 'https://github.com/theunhackable/cryptor'
   }
   
 ];
 
-const ProjectCard = ({heading, image, tags}: {heading: string, image: string, tags: string[]}) => {
+const ProjectCard = ({heading, image, tags, live, github}: {heading: string, image: string, tags: string[], live: string, github: string}) => {
   return (
     <div className="project-container">
           <div className="project-image border-white border-[1px] rounded-2xl">
@@ -35,10 +41,10 @@ const ProjectCard = ({heading, image, tags}: {heading: string, image: string, ta
               {heading}
             </h1>
             <div className="flex gap-4 text-body-medium  underline font-bold">
-              <Link href='/'>
+              <Link href={github}>
                 GitHub
               </Link>
-              <Link href='/'>
+              <Link href={live}>
                 Live
               </Link>
             </div>
@@ -60,7 +66,7 @@ const Projects = () => {
       <p className='text-center text-body-large max-sm:text-body-normal font-extrabold text-dark-5 dark:text-light-b ml-96 max-md:ml-24 max-sm:ml-32 mb-16'> — Linus Torvalds.</p>
 
       <div className="flex flex-wrap justify-center p-16 max-md:p-4 gap-16">
-        {projects.map(project => <ProjectCard key={project.heading} heading={project.heading} image={project.image} tags={project.tags}/>)}
+        {projects.map(project => <ProjectCard key={project.heading} heading={project.heading} image={project.image} tags={project.tags} live={project.live} github={project.github}/>)}
       </div>
     </section>
   )
