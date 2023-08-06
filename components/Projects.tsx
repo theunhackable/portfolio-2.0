@@ -40,7 +40,7 @@ const ProjectCard = ({heading, image, tags, live, github}: {heading: string, ima
             <h1 className="text-h-5 max-lg:text-h-6 max-md:text-body-large font-semibold">
               {heading}
             </h1>
-            <div className="flex gap-4 text-body-medium  underline font-bold">
+            <div className="flex gap-4 text-body-medium max-md:text-body-normal underline font-bold">
               <Link href={github}>
                 GitHub
               </Link>

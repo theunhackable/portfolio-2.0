@@ -5,6 +5,23 @@ import ThemeButton from './ThemeButton';
 import MenuButton from './MenuButton';
 import { useState } from 'react';
 import CloseButton from './CloseButton';
+import { AnimatePresence } from 'framer-motion';
+
+
+
+
+const Menu = ({className}:{className: string}) => {
+  return (
+    <ul className={className}>
+              <Link href='#hero'>Home</Link>
+              <Link href='#about'>About Me</Link>
+              <Link href='#skills'>Skills</Link>
+              <Link href='#projects'>Project</Link>
+              <Link href='#contact'>Contact</Link>
+
+            </ul>
+  )
+}
 
 const Navbar = () => {
   const [isOpened, setIsOpened] = useState(false);
@@ -20,29 +37,30 @@ const Navbar = () => {
         <div className='flex items-center gap-8'>
           
           <div className='p-0 max-md:hidden'>
-            <ul className='flex gap-4 font-bold text-dark-2 dark:text-light-d text-body-large items-center'>
-              <Link href='#home'>Home</Link>
-              <Link href='#about'>About Me</Link>
-              <Link href='#skills'>Skills</Link>
-              <Link href='#projects'>Project</Link>
-              <Link href='#contact'>Contact</Link>
-
-            </ul>
+          <Menu className ='flex gap-4 font-bold text-dark-2 dark:text-light-d text-body-large items-center'/>
           </div>
           <ThemeButton />
           <div className='none max-md:block' onClick={() => {setIsOpened(!isOpened)}}>
-            {isOpened? <CloseButton /> :<MenuButton/>}
+            {isOpened? <></>:<MenuButton/>}
           </div>
         </div>
 
       </nav>
-      {isOpened ? <ul className='mt-[72px] p-4 w-1/2 md:hidden flex flex-col fixed right-0 gap-8 font-extrabold text-dark-2 backdrop-blur-xl dark:text-light-e text-body-large items-center'>
-        <Link href='/'>Home</Link>
-        <Link href='/about'>About Me</Link>
-        <Link href='/projects'>Project</Link>
-        <Link href='/contact'>Contact</Link>
-      </ul>: <></>}
+      <AnimatePresence>
+        {isOpened? (
+          <div 
+            className='fixed z-50 m-0 w-full h-full bg-dark-trans2 backdrop-blur-lg'
+            onClick={() => {setIsOpened(!isOpened)}}
+           >
+              <div className='fixed top-2 right-2'>
+                <CloseButton  />
+              </div>
+              <Menu className ='mt-72 flex top-3 flex-col gap-4 font-bold text-dark-2 dark:text-light-d text-body-large items-center'/>
 
+          
+          </div>
+        ): <></> }
+      </AnimatePresence>
     </>
   )
 }

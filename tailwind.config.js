@@ -19,6 +19,8 @@ module.exports = {
           'dark-5': '#555555',
           'dark-blue': '#116DC1',
           'dark-trans': '#11111166',
+          'dark-trans2': '#11111177',
+
           // light colors
           'light-f': '#ffffff',
           'light-e': '#eeeeee',
