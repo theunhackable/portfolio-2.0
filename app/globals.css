@@ -3,11 +3,10 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-html{
-    scroll-behavior: smooth;
-    scroll-padding: 50px;
-
-}
+html {
+    --scroll-behavior: smooth!important;
+    scroll-behavior: smooth!important;
+    }
 section{
     @apply flex flex-col items-center justify-center p-16 max-lg:px-8 max-lg:py-16 max-sm:px-2;
     min-height: 100vh;
