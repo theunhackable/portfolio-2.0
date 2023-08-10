@@ -5,7 +5,7 @@ import ThemeButton from './ThemeButton';
 import MenuButton from './MenuButton';
 import { useState } from 'react';
 import CloseButton from './CloseButton';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 
 
@@ -47,8 +47,11 @@ const Navbar = () => {
 
       </nav>
       <AnimatePresence>
-        {isOpened? (
-          <div 
+        {isOpened && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className='fixed z-50 m-0 w-full h-full bg-light-trans dark:bg-dark-trans2 backdrop-blur-lg'
             onClick={() => {setIsOpened(!isOpened)}}
            >
@@ -58,8 +61,8 @@ const Navbar = () => {
               <Menu className ='mt-72 flex top-3 flex-col gap-4 font-bold text-dark-2 dark:text-light-d text-body-large items-center'/>
 
           
-          </div>
-        ): <></> }
+          </motion.div>
+        )}
       </AnimatePresence>
     </>
   )
