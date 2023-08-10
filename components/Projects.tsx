@@ -20,31 +20,38 @@ const projects = [
     github: 'https://github.com/theunhackable/gpt3-landing-page'
   },
   {
-    heading: 'Cryptor',
-    image: 'cryptor.png',
-    desc: `This website is used to encrypt and decrypt text files.`,
-    tags:['HTML', 'CSS', 'Flask(Python3)'],
-    live: 'https://cryptor.pythonanywhere.com/',
-    github: 'https://github.com/theunhackable/cryptor'
+    heading: 'CarHub',
+    image: 'car-showroom.png',
+    desc: `CarHub is a place where you search for cars.`,
+    tags:['NextJs', 'TailwindCSS', 'TypeScript', 'Vercel'],
+    live: 'https://cars-showroom-one.vercel.app/',
+    github: 'https://github.com/theunhackable/cars-showroom/'
+  },
+  {
+    heading: 'Markdown Viewer',
+    image: 'markdown-viewer.png',
+    desc: `This is a webpage which preview markdown text.`,
+    tags:['ReactJs', 'Github Pages'],
+    live: 'https://theunhackable.github.io/markdown-previewer/',
+    github: 'https://github.com/theunhackable/markdown-previewer'
   }
-  
 ];
 
 const ProjectCard = ({heading, image, tags, live, github}: {heading: string, image: string, tags: string[], live: string, github: string}) => {
   return (
     <div className="project-container">
-          <div className="project-image border-white border-[1px] rounded-2xl">
-            <Image className='rounded-2xl' src={`/assets/projects/${image}`} alt={heading} width={600} height={300} priority />
+          <div className="project-image  border-[1px] border-black dark:border-white rounded-xl">
+            <Image className='rounded-xl' src={`/assets/projects/${image}`} alt={heading} width={600} height={300} priority />
           </div>
           <div className="project-content pt-4">
             <h1 className="text-h-5 max-lg:text-h-6 max-md:text-body-large font-semibold">
               {heading}
             </h1>
             <div className="flex gap-4 text-body-medium max-md:text-body-normal underline font-bold">
-              <Link href={github}>
+              <Link target='__blank' href={github}>
                 GitHub
               </Link>
-              <Link href={live}>
+              <Link target='__blank' href={live}>
                 Live
               </Link>
             </div>
