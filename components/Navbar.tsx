@@ -49,7 +49,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpened? (
           <div 
-            className='fixed z-50 m-0 w-full h-full bg-dark-trans2 backdrop-blur-lg'
+            className='fixed z-50 m-0 w-full h-full bg-light-trans dark:bg-dark-trans2 backdrop-blur-lg'
             onClick={() => {setIsOpened(!isOpened)}}
            >
               <div className='fixed top-2 right-2'>
