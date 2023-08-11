@@ -4,10 +4,18 @@ import Link from 'next/link'
 import React from 'react'
 const projects = [
   {
+    heading: 'CarHub',
+    image: 'car-showroom.png',
+    desc: `CarHub is a place where you search for cars.`,
+    tags:['NextJs', 'TailwindCSS', 'TypeScript'],
+    live: 'https://cars-showroom-one.vercel.app/',
+    github: 'https://github.com/theunhackable/cars-showroom/'
+  },
+  {
     heading: 'promptopia',
     image: 'promptopia.png',
     desc: `Promptopia is a full stack nextjs project that is useful to create edit and use AI prompts. Sign In with your google account and get started ...`,
-    tags:['Next Js', 'Vercel'],
+    tags:['Next Js', 'TailwindCSS'],
     live: 'https://promptopia-two-dun.vercel.app/',
     github: 'https://github.com/theunhackable/promptopia'
   },
@@ -15,32 +23,32 @@ const projects = [
     heading: 'GPT-3 Landing Page',
     image: 'gpt3.png',
     desc: `Landing page of GPT-3, build using React.Js. This web page is responsive and mobile friendly. Used CSS3 for styling. Deployed to GitHub Pages using gh-pages tool.`,
-    tags:['React Js', 'Github Pages'],
+    tags:['React Js'],
     live: 'https://theunhackable.github.io/gpt3-landing-page/',
     github: 'https://github.com/theunhackable/gpt3-landing-page'
-  },
-  {
-    heading: 'CarHub',
-    image: 'car-showroom.png',
-    desc: `CarHub is a place where you search for cars.`,
-    tags:['NextJs', 'TailwindCSS', 'TypeScript', 'Vercel'],
-    live: 'https://cars-showroom-one.vercel.app/',
-    github: 'https://github.com/theunhackable/cars-showroom/'
   },
   {
     heading: 'Markdown Viewer',
     image: 'markdown-viewer.png',
     desc: `This is a webpage which preview markdown text.`,
-    tags:['ReactJs', 'Github Pages'],
+    tags:['ReactJs'],
     live: 'https://theunhackable.github.io/markdown-previewer/',
     github: 'https://github.com/theunhackable/markdown-previewer'
+  },
+  {
+    heading: 'Random Quote Generator',
+    image: 'random-quote-generator.png',
+    desc: `load random quotes on click of a button and share it on twitter...`,
+    tags:['ReactJs'],
+    live: 'https://theunhackable.github.io/random-quote-machine/',
+    github: 'https://github.com/theunhackable/random-quote-machine'
   }
 ];
 
 const ProjectCard = ({heading, image, tags, live, github}: {heading: string, image: string, tags: string[], live: string, github: string}) => {
   return (
     <div className="project-container">
-          <div className="project-image  border-[1px] border-black dark:border-white rounded-xl">
+          <div className="project-image  border-2 border-dark-5 dark:border-white rounded-xl">
             <Image className='rounded-xl' src={`/assets/projects/${image}`} alt={heading} width={600} height={300} priority />
           </div>
           <div className="project-content pt-4">
@@ -75,6 +83,7 @@ const Projects = () => {
       <div className="flex flex-wrap justify-center p-16 max-md:p-4 gap-16">
         {projects.map(project => <ProjectCard key={project.heading} heading={project.heading} image={project.image} tags={project.tags} live={project.live} github={project.github}/>)}
       </div>
+      <h1 className='mt-3 text-h-6 text-center max-md:text-body-medium'>Can I call this website as my project? 😅 ...</h1>
     </section>
   )
 }

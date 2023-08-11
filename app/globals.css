@@ -16,7 +16,7 @@ body {
     @apply bg-light-e dark:bg-dark-1
 }
 .project-container{
-    @apply border-light-a border-2 p-4 max-sm:p-2 w-fit rounded-2xl dark:text-white shadow-light dark:shadow-dark;
+    @apply border-dark-5 border-2 p-4 max-sm:p-2 w-fit rounded-2xl dark:text-white shadow-light dark:shadow-dark;
     
     
 }
