@@ -13,9 +13,9 @@ const MenuButton = () => {
 
   return (
     theme === "dark"?
-    <Image src='/assets/icons/menu_dark.svg' className='md:hidden' alt='menu' width={45} height={75}/>
+    <Image src='/assets/icons/menu_dark.svg' className='md:hidden' alt='menu' width={45} height={75} priority/>
     :
-    <Image src='/assets/icons/menu.svg' className='md:hidden' alt='menu' width={45} height={75}/>
+    <Image src='/assets/icons/menu.svg' className='md:hidden' alt='menu' width={45} height={75} priority/>
 
 
   )

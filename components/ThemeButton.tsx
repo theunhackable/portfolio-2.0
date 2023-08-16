@@ -52,8 +52,8 @@ const ThemeButton = () => {
         <div className='rounded-full p-1 bg-dark-2 dark:bg-light-a spin-once hover:cursor-pointer' onClick={handleThemeChange}>
             {
                 theme === "light" ?
-                (<Image width={35} height={35} src='/assets/icons/dark_mode.svg' alt="dark"/>):
-                (<Image width={35} height={35} src='/assets/icons/light_mode.svg' alt="light"/>)
+                (<Image width={35} height={35} src='/assets/icons/dark_mode.svg' alt="dark" priority/> ):
+                (<Image width={35} height={35} src='/assets/icons/light_mode.svg' alt="light" priority/>)
             }
         </div> )
 }

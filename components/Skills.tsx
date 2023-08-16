@@ -70,7 +70,7 @@ const skills = [
 const SkillCard=({skill, img}:{skill:string, img: string}) =>(
   <div id="skill-container" className='flex flex-col justify-center
   items-center dark:text-white text-body-medium max-md:text-body-normal font-semibold'>
-  <Image src={`/assets/icons/${img}`} alt={skill} height={100} width={100} className='max-md:w-[75px]'/>
+  <Image src={`/assets/icons/${img}`} alt={skill} height={100} width={100} className='max-md:w-[75px]' priority={img.includes('dark')}/>
   <p className='mt-2'>
     {skill}
   </p>
