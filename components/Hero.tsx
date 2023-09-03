@@ -35,7 +35,7 @@ const Hero = () => {
                 <Link target="__blank" href='https://github.com/theunhackable'>
                   <Image src={`/assets/icons/github${theme === "dark"? "_dark": ""}.svg`} alt='twitter' width={50} height={50} className='max-xl:w-[45px]'/>
                 </Link>
-                <Link target="__blank" href='/Sri Ranga Sai Pagala_NOA.pdf'>
+                <Link target="__blank" href='/Sri Ranga Sai Pagala_Experience.pdf'>
                   <div className='flex gap-2 bg-dark-2 dark:bg-light-e text-white dark:text-dark-2 px-8 max-xl:px-4 py-2 rounded-2xl justify-center items-center hover:bg-dark-blue dark:hover:bg-light-blue'>
                     <p className='text-body-large hover:underline font-semibold max-xl:text-body-medium'>Resume</p>
                     <Image className='float' src={`/assets/icons/open_in_new${theme === "dark"? "_dark": ""}.svg`} alt='open' width={25} height={25} priority/>

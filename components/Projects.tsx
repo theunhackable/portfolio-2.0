@@ -3,6 +3,14 @@ import Link from 'next/link'
 import React from 'react'
 const projects = [
   {
+    heading: 'Cafiend (Currently Working on it))',
+    image: 'cafiend.png',
+    desc: `Cafiend is a coffee selling website with variety of coffee products.`,
+    tags:['NextJs', 'TailwindCSS', 'TypeScript'],
+    live: 'https://cafiend-chi.vercel.app/',
+    github: 'https://github.com/theunhackable/cafiend'
+  },
+  {
     heading: 'CarHub',
     image: 'car-showroom.png',
     desc: `CarHub is a place where you search for cars.`,
@@ -28,7 +36,7 @@ const projects = [
   },
   {
     heading: 'Markdown Viewer',
-    image: 'markdown-viewer.png',
+    image: 'markdown-preview.png',
     desc: `This is a webpage which preview markdown text.`,
     tags:['ReactJs'],
     live: 'https://theunhackable.github.io/markdown-previewer/',
@@ -47,8 +55,8 @@ const projects = [
 const ProjectCard = ({heading, image, tags, live, github}: {heading: string, image: string, tags: string[], live: string, github: string}) => {
   return (
     <div className="project-container">
-          <div className="project-image  border-2 border-dark-5 dark:border-white rounded-xl">
-            <Image className='rounded-xl' src={`/assets/projects/${image}`} alt={heading} width={600} height={300} priority />
+          <div className="project-image overflow-hidden  border-2 border-dark-5 dark:border-white rounded-xl">
+            <Image  src={`/assets/projects/${image}`} alt={heading} width={600} height={300} priority />
           </div>
           <div className="project-content pt-4">
             <h1 className="text-h-5 max-lg:text-h-6 max-md:text-body-large font-semibold">

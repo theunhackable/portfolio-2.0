@@ -27,7 +27,6 @@ const ThemeButton = () => {
 
 
   const handleThemeChange = () => {
-    console.log('handlechange', theme)  
     if(theme){
         if(theme === "dark") {
             setTheme("light");
