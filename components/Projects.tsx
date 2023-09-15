@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 const projects = [
   {
-    heading: 'Cafiend (Currently Working on it))',
+    heading: 'Cafiend',
     image: 'cafiend.png',
     desc: `Cafiend is a coffee selling website with variety of coffee products.`,
     tags:['NextJs', 'TailwindCSS', 'TypeScript'],
@@ -90,7 +90,7 @@ const Projects = () => {
       <div className="flex flex-wrap justify-center p-16 max-md:p-4 gap-16">
         {projects.map(project => <ProjectCard key={project.heading} heading={project.heading} image={project.image} tags={project.tags} live={project.live} github={project.github}/>)}
       </div>
-      <h1 className='mt-3 text-h-6 text-center max-md:text-body-medium'>Can I call this website as my project? 😅 ...</h1>
+      {/* <h1 className='mt-3 text-h-6 text-center max-md:text-body-medium'>Can I call this website as my project? 😅 ...</h1> */}
     </section>
   )
 }
