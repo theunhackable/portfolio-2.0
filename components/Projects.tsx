@@ -3,10 +3,19 @@ import Link from 'next/link'
 import React from 'react'
 const projects = [
   {
+    heading: 'Epic SASS ( on going ... )',
+    image: 'epic-sass.png',
+    desc: `A sass website made using next.js and stripe with superbase support.`,
+    tags:['NextJs', 'TailwindCSS', 'Supabase', 'TypeScript'],
+    live: '',
+    github: 'https://github.com/theunhackable/epic-sass'
+
+  },
+  {
     heading: 'Cafiend',
     image: 'cafiend.png',
     desc: `Cafiend is a coffee selling website with variety of coffee products.`,
-    tags:['NextJs', 'TailwindCSS', 'TypeScript'],
+    tags:['NextJs', 'TailwindCSS', 'Context API', 'TypeScript'],
     live: 'https://cafiend-chi.vercel.app/',
     github: 'https://github.com/theunhackable/cafiend'
   },
