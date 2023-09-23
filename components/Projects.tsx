@@ -3,11 +3,11 @@ import Link from 'next/link'
 import React from 'react'
 const projects = [
   {
-    heading: 'Epic SASS ( on going ... )',
+    heading: 'Epic SASS',
     image: 'epic-sass.png',
     desc: `A sass website made using next.js and stripe with superbase support.`,
     tags:['NextJs', 'TailwindCSS', 'Supabase', 'TypeScript'],
-    live: '',
+    live: 'https://epic-sass-ruddy.vercel.app/',
     github: 'https://github.com/theunhackable/epic-sass'
 
   },
