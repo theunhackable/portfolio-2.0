@@ -1,5 +1,4 @@
 import { ImageResponse } from 'next/server'
- 
 // Route segment config
 export const runtime = 'edge'
  
@@ -17,20 +16,14 @@ export default async function Image() {
   // Font
   return new ImageResponse(
     (
-      // ImageResponse JSX element
-      <div
-        style={{
-          fontSize: 128,
-          background: 'white',
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        About Sri Ranga Sai Pagala
+      <div>
+
+        // ImageResponse JSX element
+        <h1 className='heading'>
+          Hi! I am <span className='text-black dark:text-white'>Sri Ranga Sai</span>,<br/> a <span className='text-black dark:text-white'>Full Stack Web<br/> Developer</span>
+        </h1>
       </div>
+
     ),
     // ImageResponse options
     {
