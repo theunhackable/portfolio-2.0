@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import Provider from './Providers'
 export const metadata: Metadata = {
   title: 'SRSP',
-  description: 'Personal Portfolio',
+  description: 'The choices you make today will be your biography tomorrow.',
 }
 
 export default function RootLayout({
