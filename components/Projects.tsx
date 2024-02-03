@@ -3,6 +3,14 @@ import Link from 'next/link'
 import React from 'react'
 const projects = [
   {
+    heading: 'Pokédex',
+    tags: ['NextJs', 'PokeAPI', 'TypeScript'],
+    image: 'pokedex.png',
+    desc: `A sass website made using next.js and stripe with superbase support.`,
+    live: 'https://srs-pokedex.vercel.app/',
+    github: 'https://github.com/theunhackable/pokedex'
+  },
+  {
     heading: 'Epic SASS',
     image: 'epic-sass.png',
     desc: `A sass website made using next.js and stripe with superbase support.`,
@@ -12,20 +20,20 @@ const projects = [
 
   },
   {
-    heading: 'Cafiend',
-    image: 'cafiend.png',
-    desc: `Cafiend is a coffee selling website with variety of coffee products.`,
-    tags:['NextJs', 'TailwindCSS', 'Context API', 'TypeScript'],
-    live: 'https://cafiend-chi.vercel.app/',
-    github: 'https://github.com/theunhackable/cafiend'
-  },
-  {
     heading: 'CarHub',
     image: 'car-showroom.png',
     desc: `CarHub is a place where you search for cars.`,
     tags:['NextJs', 'TailwindCSS', 'TypeScript'],
     live: 'https://cars-showroom-one.vercel.app/',
     github: 'https://github.com/theunhackable/cars-showroom/'
+  },
+  {
+    heading: 'Cafiend',
+    image: 'cafiend.png',
+    desc: `Cafiend is a coffee selling website with variety of coffee products.`,
+    tags:['NextJs', 'TailwindCSS', 'Context API', 'TypeScript'],
+    live: 'https://cafiend-chi.vercel.app/',
+    github: 'https://github.com/theunhackable/cafiend'
   },
   {
     heading: 'promptopia',
@@ -43,22 +51,7 @@ const projects = [
     live: 'https://theunhackable.github.io/gpt3-landing-page/',
     github: 'https://github.com/theunhackable/gpt3-landing-page'
   },
-  {
-    heading: 'Markdown Viewer',
-    image: 'markdown-preview.png',
-    desc: `This is a webpage which preview markdown text.`,
-    tags:['ReactJs'],
-    live: 'https://theunhackable.github.io/markdown-previewer/',
-    github: 'https://github.com/theunhackable/markdown-previewer'
-  },
-  {
-    heading: 'Random Quote Generator',
-    image: 'random-quote-generator.png',
-    desc: `load random quotes on click of a button and share it on twitter...`,
-    tags:['ReactJs'],
-    live: 'https://theunhackable.github.io/random-quote-machine/',
-    github: 'https://github.com/theunhackable/random-quote-machine'
-  }
+  
 ];
 
 const ProjectCard = ({heading, image, tags, live, github}: {heading: string, image: string, tags: string[], live: string, github: string}) => {
