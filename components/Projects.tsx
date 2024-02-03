@@ -6,7 +6,7 @@ const projects = [
     heading: 'Pokédex',
     tags: ['NextJs', 'PokeAPI', 'TypeScript'],
     image: 'pokedex.png',
-    desc: `A sass website made using next.js and stripe with superbase support.`,
+    desc: `A website which uses pokeAPI to display pokemon stats.`,
     live: 'https://srs-pokedex.vercel.app/',
     github: 'https://github.com/theunhackable/pokedex'
   },
