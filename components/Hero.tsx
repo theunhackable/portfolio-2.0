@@ -21,7 +21,7 @@ const Hero = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay:1, duration: 0.5 }}
             className='heading'>
-            Hi! I am <span className='text-black dark:text-white'>Sri Ranga Sai</span>,<br/> a <span className='text-black dark:text-white'>Full Stack Web<br/> Developer</span>
+            Hi! I am <span className='text-black dark:text-white'>Sri Ranga Sai</span>,<br/> a <span className='text-black dark:text-white'>Frontend Web<br/> Developer</span>
             </motion.h1>
             <div className='mt-16'>
 
